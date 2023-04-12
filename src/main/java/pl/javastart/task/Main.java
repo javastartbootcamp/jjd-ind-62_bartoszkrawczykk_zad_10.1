@@ -5,12 +5,10 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
+        System.out.println("Podaj informację o trzech unikalnych książkach");
         Builder builder = new Builder();
-        System.out.println("Podaj informację o trzech unikalnych książkach\n");
 
         Example[] examples = builder.createExampleArray;
-
-        System.out.println("Podaj informację o trzech unikalnych książkach\n");
 
     }
 }
