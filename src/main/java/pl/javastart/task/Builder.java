@@ -5,21 +5,32 @@ import java.util.Scanner;
 public class Builder {
     private Scanner scanner = new Scanner(System.in);
 
-    Example createExample() {
+    Book createBook() {
         System.out.println("Podaj tytuł:");
         String name = scanner.nextLine();
         System.out.println("Podaj ilość stron:");
         int amount = scanner.nextInt();
         scanner.nextLine();
-        return new Example(name, amount);
+        return new Book(name, amount);
     }
 
-    Example[] createExampleArray;
+    void check() {
+        String previous = createBook().getName();
+        do {
+            String next = createBook().getName();
+            if (previous.equals(next))
+                break;
+            previous = next;
+        } while (true);
+        System.out.println("Duplikat");
+    }
+
+    Book[] createBookArray;
 
     {
-        Example[] examples = new Example[3];
-        examples[0] = createExample();
-        examples[1] = createExample();
-        examples[2] = createExample();
+        Book[] examples = new Book[3];
+        examples[0] = createBook();
+        examples[1] = createBook();
+        examples[2] = createBook();
     }
 }
